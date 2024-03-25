@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
       - "CMakeLists.txt:6 (project)"
     message: |
       The system is: Windows - 10.0.22631 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Program Files/LLVM/bin/clang.exe 
+      Compiler: S:/Program Files/LLVM/bin/clang.exe 
       Build flags: 
       Id flags:  
       
@@ -28,14 +28,14 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is Clang, found in:
-        C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/3.29.0-rc2/CompilerIdC/a.exe
+        S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/3.29.0-rc2/CompilerIdC/a.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Detecting C compiler /showIncludes prefix:
@@ -43,9 +43,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Detecting C compiler /showIncludes prefix:
@@ -53,13 +53,13 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/Program Files/LLVM/bin/clang++.exe 
+      Compiler: S:/Program Files/LLVM/bin/clang++.exe 
       Build flags: 
       Id flags:  
       
@@ -70,14 +70,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is Clang, found in:
-        C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/3.29.0-rc2/CompilerIdCXX/a.exe
+        S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/3.29.0-rc2/CompilerIdCXX/a.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Detecting CXX compiler /showIncludes prefix:
@@ -85,9 +85,9 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1214 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Detecting CXX compiler /showIncludes prefix:
@@ -95,16 +95,16 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-trdaix"
-      binary: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-trdaix"
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-emypmz"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-emypmz"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -112,29 +112,29 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-trdaix'
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-emypmz'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_42e3e
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_42e3e.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_42e3e.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_42e3e.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_42e3e.dir/CMakeCCompilerABI.c.obj -o cmTC_42e3e.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_42e3e.lib -Xlinker /pdb:cmTC_42e3e.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_9f884
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang.exe"   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_9f884.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_9f884.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_9f884.dir/CMakeCCompilerABI.c.obj -c "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang.exe" -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_9f884.dir/CMakeCCompilerABI.c.obj -o cmTC_9f884.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9f884.lib -Xlinker /pdb:cmTC_9f884.pdb -Xlinker /version:0.0     && cd ."
         clang version 16.0.0
         Target: x86_64-pc-windows-msvc
         Thread model: posix
-        InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_42e3e.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.20348.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.20348.0\\\\um\\\\x64" "-libpath:C:\\\\PROGRA~1\\\\LLVM\\\\lib\\\\clang\\\\16\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_42e3e.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_42e3e.lib /pdb:cmTC_42e3e.pdb /version:0.0\x0d
+        InstalledDir: S:\\Program Files\\LLVM\\bin
+         "S:\\\\Program Files\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_9f884.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\atlmfc\\\\lib\\\\x64" "-libpath:S:\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:S:\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:S:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\16\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_9f884.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_9f884.lib /pdb:cmTC_9f884.pdb /version:0.0\x0d
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/PROGRA~1/LLVM/bin/lld-link
+        linker tool for 'C': S:/Program Files/LLVM/bin/lld-link
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -144,48 +144,48 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "-v"
+      Running the C compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "-v"
       lld-link: warning: ignoring unknown argument '-v'
       lld-link: error: no input files
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "-V"
+      Running the C compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "-V"
       lld-link: warning: ignoring unknown argument '-V'
       lld-link: error: no input files
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the C compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "--version"
+      Running the C compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "--version"
       LLD 16.0.0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-y2atn2"
-      binary: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-y2atn2"
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-xhbk6l"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-xhbk6l"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -193,29 +193,29 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-y2atn2'
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-xhbk6l'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_83f1f
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_83f1f.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_83f1f.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_83f1f.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_83f1f.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_83f1f.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_83f1f.lib -Xlinker /pdb:cmTC_83f1f.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_3d2d6
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe"   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_3d2d6.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_3d2d6.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_3d2d6.dir/CMakeCXXCompilerABI.cpp.obj -c "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v  -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_3d2d6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_3d2d6.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_3d2d6.lib -Xlinker /pdb:cmTC_3d2d6.pdb -Xlinker /version:0.0     && cd ."
         clang version 16.0.0
         Target: x86_64-pc-windows-msvc
         Thread model: posix
-        InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_83f1f.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.20348.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.20348.0\\\\um\\\\x64" "-libpath:C:\\\\PROGRA~1\\\\LLVM\\\\lib\\\\clang\\\\16\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_83f1f.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_83f1f.lib /pdb:cmTC_83f1f.pdb /version:0.0\x0d
+        InstalledDir: S:\\Program Files\\LLVM\\bin
+         "S:\\\\Program Files\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_3d2d6.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.39.33519\\\\atlmfc\\\\lib\\\\x64" "-libpath:S:\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\ucrt\\\\x64" "-libpath:S:\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.22621.0\\\\um\\\\x64" "-libpath:S:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\16\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_3d2d6.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_3d2d6.lib /pdb:cmTC_3d2d6.pdb /version:0.0\x0d
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/PROGRA~1/LLVM/bin/lld-link
+        linker tool for 'CXX': S:/Program Files/LLVM/bin/lld-link
         implicit libs: []
         implicit objs: []
         implicit dirs: []
@@ -225,51 +225,51 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "-v"
+      Running the CXX compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "-v"
       lld-link: warning: ignoring unknown argument '-v'
       lld-link: error: no input files
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "-V"
+      Running the CXX compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "-V"
       lld-link: warning: ignoring unknown argument '-V'
       lld-link: error: no input files
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:6 (project)"
     message: |
-      Running the CXX compiler's linker: "C:/PROGRA~1/LLVM/bin/lld-link" "--version"
+      Running the CXX compiler's linker: "S:/Program Files/LLVM/bin/lld-link" "--version"
       LLD 16.0.0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:84 (_record_compiler_features)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake:121 (_record_compiler_features_cxx)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:84 (_record_compiler_features)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake:121 (_record_compiler_features_cxx)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
       - "CMakeLists.txt:6 (project)"
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-itgk1h"
-      binary: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-itgk1h"
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-054nu3"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-054nu3"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -277,29 +277,29 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-itgk1h'
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-054nu3'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_12c10
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_12c10.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_12c10.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_12c10.dir/feature_tests.cxx.obj -c C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-itgk1h/feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_12c10.dir/feature_tests.cxx.obj -o cmTC_12c10.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_12c10.lib -Xlinker /pdb:cmTC_12c10.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_eeb64
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe"   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_eeb64.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_eeb64.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_eeb64.dir/feature_tests.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-054nu3/feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_eeb64.dir/feature_tests.cxx.obj -o cmTC_eeb64.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_eeb64.lib -Xlinker /pdb:cmTC_eeb64.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:84 (_record_compiler_features)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake:129 (_record_compiler_features_cxx)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
-      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/FeatureTesting.cmake:84 (_record_compiler_features)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake:129 (_record_compiler_features_cxx)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
       - "CMakeLists.txt:6 (project)"
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-g3vt4p"
-      binary: "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-g3vt4p"
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-wugb8f"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-wugb8f"
     cmakeVariables:
-      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -307,11 +307,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-g3vt4p'
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-wugb8f'
         
-        Run Build Command(s): C:/PROGRA~1/Ninja/ninja.exe -v cmTC_31871
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_31871.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_31871.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_31871.dir/feature_tests.cxx.obj -c C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-g3vt4p/feature_tests.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_31871.dir/feature_tests.cxx.obj -o cmTC_31871.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_31871.lib -Xlinker /pdb:cmTC_31871.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_d9b51
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe"   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_d9b51.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_d9b51.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_d9b51.dir/feature_tests.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-wugb8f/feature_tests.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_d9b51.dir/feature_tests.cxx.obj -o cmTC_d9b51.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_d9b51.lib -Xlinker /pdb:cmTC_d9b51.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
 ...

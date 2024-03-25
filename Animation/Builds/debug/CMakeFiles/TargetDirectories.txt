@@ -1,3 +1,3 @@
-C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/animations.dir
-C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/edit_cache.dir
-C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/CMakeFiles/rebuild_cache.dir
+S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/animations.dir
+S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/edit_cache.dir
+S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/rebuild_cache.dir

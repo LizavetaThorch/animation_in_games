@@ -1,6 +1,6 @@
+#version 330
 
-struct VsOutput
-{
+struct VsOutput {
   vec3 EyespaceNormal;
   vec3 WorldPosition;
   vec2 UV;
@@ -8,7 +8,6 @@ struct VsOutput
 
 uniform mat4 Transform;
 uniform mat4 ViewProjection;
-
 
 layout(location = 0) in vec3 Position;
 layout(location = 1) in vec3 Normal;
@@ -18,8 +17,7 @@ layout(location = 4) in uvec4 BoneIndex;
 
 out VsOutput vsOutput;
 
-void main()
-{
+void main() {
 
   vec3 VertexPosition = (Transform * vec4(Position, 1)).xyz;
   vsOutput.EyespaceNormal = (Transform * vec4(Normal, 0)).xyz;

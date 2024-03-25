@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/torch/Documents/dev/mipt/animation/Animation/sources
+# Install script for directory: S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/LLVM/bin/llvm-objdump.exe")
+  set(CMAKE_OBJDUMP "S:/Program Files/LLVM/bin/llvm-objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/torch/Documents/dev/mipt/animation/Animation/Builds/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
