@@ -1,0 +1,215 @@
+//There are 73 nodes in full tree 
+Root
+ Hips
+  Spine
+   Spine1
+    Spine2
+     LeftShoulder
+      LeftArm
+       LeftForeArm
+        LeftHand
+         LeftHandIndex1
+          LeftHandIndex2
+           LeftHandIndex3
+            LeftHandIndex4
+         LeftHandMiddle1
+          LeftHandMiddle2
+           LeftHandMiddle3
+            LeftHandMiddle4
+         LeftHandPinky1
+          LeftHandPinky2
+           LeftHandPinky3
+            LeftHandPinky4
+         LeftHandRing1
+          LeftHandRing2
+           LeftHandRing3
+            LeftHandRing4
+         LeftHandThumb1
+          LeftHandThumb2
+           LeftHandThumb3
+            LeftHandThumb4
+         hand_l_wep
+        LeafLeftForeArmRoll1
+       LeafLeftArmRoll1
+     RightShoulder
+      RightArm
+       RightForeArm
+        RightHand
+         RightHandIndex1
+          RightHandIndex2
+           RightHandIndex3
+            RightHandIndex4
+         RightHandMiddle1
+          RightHandMiddle2
+           RightHandMiddle3
+            RightHandMiddle4
+         RightHandPinky1
+          RightHandPinky2
+           RightHandPinky3
+            RightHandPinky4
+         RightHandRing1
+          RightHandRing2
+           RightHandRing3
+            RightHandRing4
+         RightHandThumb1
+          RightHandThumb2
+           RightHandThumb3
+            RightHandThumb4
+         hand_r_wep
+        LeafRightForeArmRoll1
+       LeafRightArmRoll1
+     Neck
+      Head
+  LeftUpLeg
+   LeftLeg
+    LeafLeftLegRoll1
+    LeftFoot
+     LeftToeBase
+   LeafLeftUpLegRoll1
+  RightUpLeg
+   RightLeg
+    LeafRightLegRoll1
+    RightFoot
+     RightToeBase
+   LeafRightUpLegRoll1
+
+//there are 23 main nodes
+//without fingers && wep node && Roll1
+Root
+ Hips
+  Spine
+   Spine1
+    Spine2
+     LeftShoulder
+      LeftArm
+       LeftForeArm
+        LeftHand
+     RightShoulder
+      RightArm
+       RightForeArm
+        RightHand
+     Neck
+      Head
+  LeftUpLeg
+   LeftLeg
+    LeftFoot
+     LeftToeBase
+  RightUpLeg
+   RightLeg
+    RightFoot
+     RightToeBase
+
+49
+[0.40] -1 Root
+[0.40] 0 Ribs
+[0.40] 1 Neck
+[0.40] 2 Head
+[0.40] 1 Left_Shoulder_Joint_01
+[0.40] 4 Left_Upper_Arm_Joint_01
+[0.40] 5 Left_Forearm_Joint_01
+[0.40] 6 Left_Wrist_Joint_01
+[0.40] 7 Left_Index_Finger_Joint_01a
+[0.40] 8 Left_Index_Finger_Joint_01b
+[0.40] 9 Left_Index_Finger_Joint_01c
+[0.40] 7 Left_Middle_Finger_Joint_01a
+[0.40] 11 Left_Middle_Finger_Joint_01b
+[0.40] 12 Left_Middle_Finger_Joint_01c
+[0.40] 7 Left_Ring_Finger_Joint_01a
+[0.40] 14 Left_Ring_Finger_Joint_01b
+[0.40] 15 Left_Ring_Finger_Joint_01c
+[0.40] 7 Left_Pinky_Finger_Joint_01a
+[0.40] 17 Left_Pinky_Finger_Joint_01b
+[0.40] 18 Left_Pinky_Finger_Joint_01c
+[0.40] 7 Left_Thumb_Joint_01a
+[0.40] 20 Left_Thumb_Joint_01b
+[0.40] 1 Right_Shoulder_Joint_01
+[0.40] 22 Right_Upper_Arm_Joint_01
+[0.40] 23 Right_Forearm_Joint_01
+[0.40] 24 Right_Wrist_Joint_01
+[0.40] 25 Right_Index_Finger_Joint_01a
+[0.40] 26 Right_Index_Finger_Joint_01b
+[0.40] 27 Right_Index_Finger_Joint_01c
+[0.40] 25 Right_Middle_Finger_Joint_01a
+[0.40] 29 Right_Middle_Finger_Joint_01b
+[0.40] 30 Right_Middle_Finger_Joint_01c
+[0.40] 25 Right_Ring_Finger_Joint_01a
+[0.40] 32 Right_Ring_Finger_Joint_01b
+[0.40] 33 Right_Ring_Finger_Joint_01c
+[0.40] 25 Right_Pinky_Finger_Joint_01a
+[0.40] 35 Right_Pinky_Finger_Joint_01b
+[0.40] 36 Right_Pinky_Finger_Joint_01c
+[0.40] 25 Right_Thumb_Joint_01a
+[0.40] 38 Right_Thumb_Joint_01b
+[0.40] 0 Hips
+[0.40] 40 Left_Thigh_Joint_01
+[0.40] 41 Left_Knee_Joint_01
+[0.40] 42 Left_Ankle_Joint_01
+[0.40] 43 Left_Toe_Joint_01
+[0.40] 40 Right_Thigh_Joint_01
+[0.40] 45 Right_Knee_Joint_01
+[0.40] 46 Right_Ankle_Joint_01
+[0.40] 47 Right_Toe_Joint_01
+
+62
+[0.45] Node AnimUprisingRig
+[0.45] Node AnimatedRoot
+[0.45] Node Chest
+[0.45] Node Foot.L
+[0.45] Node Foot.R
+[0.45] Node Hand.L
+[0.45] Node Hand.R
+[0.45] Node Head
+[0.45] Node Hips
+[0.45] Node IndexDistal.L
+[0.45] Node IndexDistal.R
+[0.45] Node IndexIntermediate.L
+[0.45] Node IndexIntermediate.R
+[0.45] Node IndexPalm.L
+[0.45] Node IndexPalm.R
+[0.45] Node IndexProximal.L
+[0.45] Node IndexProximal.R
+[0.45] Node LowerArm.L
+[0.45] Node LowerArm.R
+[0.45] Node LowerLeg.L
+[0.45] Node LowerLeg.R
+[0.45] Node MiddleDistal.L
+[0.45] Node MiddleDistal.R
+[0.45] Node MiddleIntermediate.L
+[0.45] Node MiddleIntermediate.R
+[0.45] Node MiddlePalm.L
+[0.45] Node MiddlePalm.R
+[0.45] Node MiddleProximal.L
+[0.45] Node MiddleProximal.R
+[0.45] Node Neck
+[0.45] Node PinkyDistal.L
+[0.45] Node PinkyDistal.R
+[0.45] Node PinkyIntermediate.L
+[0.45] Node PinkyIntermediate.R
+[0.45] Node PinkyPalm.L
+[0.45] Node PinkyPalm.R
+[0.45] Node PinkyProximal.L
+[0.45] Node PinkyProximal.R
+[0.45] Node RingDistal.L
+[0.45] Node RingDistal.R
+[0.45] Node RingIntermediate.L
+[0.45] Node RingIntermediate.R
+[0.45] Node RingPalm.L
+[0.45] Node RingPalm.R
+[0.45] Node RingProximal.L
+[0.45] Node RingProximal.R
+[0.45] Node Shoulder.L
+[0.45] Node Shoulder.R
+[0.45] Node Spine
+[0.45] Node ThumbDistal.L
+[0.45] Node ThumbDistal.R
+[0.45] Node ThumbIntermediate.L
+[0.45] Node ThumbIntermediate.R
+[0.45] Node ThumbProximal.L
+[0.45] Node ThumbProximal.R
+[0.45] Node Toe.L
+[0.45] Node Toe.R
+[0.45] Node UpperArm.L
+[0.45] Node UpperArm.R
+[0.45] Node UpperChest
+[0.45] Node UpperLeg.L
+[0.45] Node UpperLeg.R
