@@ -4,6 +4,7 @@
 #include <render/mesh.h>
 #include "camera.h"
 #include <application.h>
+#include <render/debug_arrow.h>
 
 struct UserCamera
 {
@@ -67,6 +68,9 @@ void game_init()
     load_mesh("resources/MotusMan_v55/MotusMan_v55.fbx", 0),
     std::move(material)
   });
+
+  create_arrow_render();
+
   std::fflush(stdout);
 }
 
@@ -94,6 +98,14 @@ void render_character(const Character &character, const mat4 &cameraProjView, ve
   shader.set_vec3("SunLight", light.lightColor);
 
   render(character.mesh);
+
+  for (const auto &bone : character.mesh->bones)
+  {
+    draw_arrow(bone.bindPose, vec3(0), vec3(0.1f, 0, 0), vec3(1, 0, 0), 0.01f);
+    draw_arrow(bone.bindPose, vec3(0), vec3(0, 0.1f, 0), vec3(0, 1, 0), 0.01f);
+    draw_arrow(bone.bindPose, vec3(0), vec3(0, 0, 0.1f), vec3(0, 0, 1), 0.01f);
+  }
+
 }
 
 void game_render()
@@ -111,4 +123,7 @@ void game_render()
 
   for (const Character &character : scene->characters)
     render_character(character, projView, glm::vec3(transform[3]), scene->light);
+
+
+  render_arrows(projView, glm::vec3(transform[3]), scene->light);
 }
