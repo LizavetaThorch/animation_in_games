@@ -1,3 +1,3 @@
-# Homework 1
+# Reasults
 
-(pictures/hw1.png)
+![Homework 1](pictures/hw1.png)
