@@ -28,7 +28,3 @@ void Material::bind_uniforms_to_shader() const
     }
   }
 }
-
-
-
-

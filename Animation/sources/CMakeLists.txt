@@ -2,14 +2,15 @@ cmake_minimum_required(VERSION 3.10)
 
 set(EXE_NAME animations)
 
-message(PROJECT = ${EXE_NAME})
+message(PROJECT = ${EXE_NAME} )
+message(${CMAKE_BINARY_DIR})
 project(${EXE_NAME})
 
 
 
 set(SRC_ROOT ${CMAKE_SOURCE_DIR})
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g")
 
 
@@ -74,4 +75,3 @@ include_directories(${SRC_ROOT}/3rd_party)
 add_executable(${EXE_NAME} ${EXE_SOURCES})
 
 target_link_libraries(${EXE_NAME} ${ADDITIONAL_LIBS})
-

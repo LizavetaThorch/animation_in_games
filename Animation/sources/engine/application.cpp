@@ -7,6 +7,7 @@
 extern void game_init();
 extern void game_update();
 extern void game_render();
+extern void imgui_render();
 extern void start_time();
 extern void update_time();
 
@@ -64,6 +65,8 @@ static bool sdl_event_handler()
 {
   SDL_Event event;
   bool running = true;
+  const bool WantCaptureMouse = ImGui::GetIO().WantCaptureMouse;
+  const bool WantCaptureKeyboard = ImGui::GetIO().WantCaptureKeyboard;
   while (SDL_PollEvent(&event))
   {
     ImGui_ImplSDL2_ProcessEvent(&event);
@@ -72,18 +75,18 @@ static bool sdl_event_handler()
 
       case SDL_KEYDOWN:
 
-      case SDL_KEYUP: input.event_process(event.key);
+      case SDL_KEYUP: if (!WantCaptureKeyboard) input.event_process(event.key);
 
       if(event.key.keysym.sym == SDLK_ESCAPE)
         running = false;
 
 
       case SDL_MOUSEBUTTONDOWN:
-      case SDL_MOUSEBUTTONUP: input.event_process(event.button); break;
+      case SDL_MOUSEBUTTONUP: if (!WantCaptureMouse) input.event_process(event.button); break;
 
-      case SDL_MOUSEMOTION: input.event_process(event.motion); break;
+      case SDL_MOUSEMOTION: if (!WantCaptureMouse) input.event_process(event.motion); break;
 
-      case SDL_MOUSEWHEEL: input.event_process(event.wheel); break;
+      case SDL_MOUSEWHEEL: if (!WantCaptureMouse) input.event_process(event.wheel); break;
 
       case SDL_WINDOWEVENT: break;
     }
@@ -119,6 +122,7 @@ void main_loop()
           ImGui::EndMainMenuBar();
         }
       }
+      imgui_render();
 
       ImGui::Render();
       ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
