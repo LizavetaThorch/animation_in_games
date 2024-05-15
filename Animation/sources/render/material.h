@@ -5,9 +5,9 @@
 #include "shader.h"
 #include "texture2d.h"
 
-#define TYPES \
-  TYPE(float, GL_FLOAT) TYPE(vec2, GL_FLOAT_VEC2) TYPE(vec3, GL_FLOAT_VEC3) TYPE(vec4, GL_FLOAT_VEC4) TYPE(Texture2DPtr, GL_SAMPLER_2D)\
-
+#define TYPES           \
+  TYPE(float, GL_FLOAT) \
+  TYPE(vec2, GL_FLOAT_VEC2) TYPE(vec3, GL_FLOAT_VEC3) TYPE(vec4, GL_FLOAT_VEC4) TYPE(Texture2DPtr, GL_SAMPLER_2D)
 
 class Material
 {
@@ -24,13 +24,12 @@ private:
   std::vector<Property> properties;
 
 public:
-
   Material(ShaderPtr &&shader) : shader(std::move(shader)) {}
 
   const Shader &get_shader() const { return *shader; }
   void bind_uniforms_to_shader() const;
 
-  template<typename T>
+  template <typename T>
   bool set_property(const char *name, T &&value)
   {
     for (Property &p : properties)
