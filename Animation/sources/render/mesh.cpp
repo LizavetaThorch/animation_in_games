@@ -7,6 +7,8 @@
 #include <log.h>
 #include "glad/glad.h"
 
+#pragma clang optimize off
+//#pragma optimize(off, "")
 static void create_indices(const std::vector<unsigned int> &indices)
 {
   GLuint arrayIndexBuffer;
@@ -139,21 +141,41 @@ MeshPtr create_mesh(const aiMesh *mesh)
       const aiBone *bone = mesh->mBones[i];
       assert(bone->mNode != nullptr);
 
-      std::cout << i << ") bone name " << bone->mName.C_Str()<< " node name"<< bone->mNode->mName.C_Str()<< std::endl;
-       //("%d) bone name %s node name %s", i, );
-      //bonesMap[std::string(bone->mName.C_Str())] = i;
-      //glm::mat4x4 mTransformation = glm::make_mat4x4(&bone->mNode->mTransformation.a1);
       glm::mat4x4 mOffsetMatrix = glm::make_mat4x4(&bone->mOffsetMatrix.a1);
       mOffsetMatrix = glm::transpose(mOffsetMatrix);
       meshPtr->bones[i].invBindPose = mOffsetMatrix;
       meshPtr->bones[i].bindPose = glm::inverse(mOffsetMatrix);
       meshPtr->bones[i].name = bone->mName.C_Str();
+      if (bone->mNode->mParent) {
+        meshPtr->bones[i].parentName = bone->mNode->mParent->mName.C_Str();
+      }
+      
+      meshPtr->bonesMap[meshPtr->bones[i].name] = i;
     }
   }
 
   return meshPtr;
 }
 
+MeshPtr load_mesh(const char *path, int idx)
+{
+
+  Assimp::Importer importer;
+  importer.SetPropertyBool(AI_CONFIG_IMPORT_FBX_PRESERVE_PIVOTS, false);
+  importer.SetPropertyFloat(AI_CONFIG_GLOBAL_SCALE_FACTOR_KEY, 1.f);
+
+  importer.ReadFile(path, aiPostProcessSteps::aiProcess_Triangulate | aiPostProcessSteps::aiProcess_LimitBoneWeights |
+    aiPostProcessSteps::aiProcess_GenNormals | aiProcess_GlobalScale | aiProcess_FlipWindingOrder | aiProcess_PopulateArmatureData);
+
+  const aiScene* scene = importer.GetScene();
+  if (!scene)
+  {
+    debug_error("no asset in %s", path);
+    return nullptr;
+  }
+
+  return create_mesh(scene->mMeshes[idx]);
+}
 
 void render(const MeshPtr &mesh)
 {

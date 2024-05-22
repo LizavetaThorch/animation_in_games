@@ -1,4 +1,5 @@
 #include <vector>
+#include <span>
 #include <render/material.h>
 #include <render/mesh.h>
 #include <render/shader.h>
@@ -34,15 +35,15 @@ struct DebugArrow
     std::vector<uint> indices;
     std::vector<vec3> vert;
     std::vector<vec3> normal;
-    vec3 c = vec3(1, 0, 0);
+    vec3 c = vec3(0, 1, 0);
     const int N = 4;
     vec3 p[N];
     for (int i = 0; i < N; i++)
     {
       float a1 = ((float)(i) / N) * 2 * PI;
       float a2 = ((float)(i + 1) / N) * 2 * PI;
-      vec3 p1 = p[i] = vec3(0, cos(a1), sin(a1));
-      vec3 p2 = vec3(0, cos(a2), sin(a2));
+      vec3 p1 = p[i] = vec3(cos(a1), 0, sin(a1));
+      vec3 p2 = vec3(cos(a2), 0, sin(a2));
       add_triangle(p2, p1, c, indices, vert, normal);
     }
 
@@ -67,12 +68,6 @@ static mat4 directionMatrix(vec3 from, vec3 to)
   return toMat4(q);
 }
 
-static void add_arrow(DebugArrow &renderer, const glm::mat4 &tm, vec3 color)
-{
-  renderer.instancesTm.emplace_back(tm);
-  renderer.instancesColor.emplace_back(vec4(color, 1.f));
-}
-
 static void add_arrow(DebugArrow &renderer, const vec3 &from, const vec3 &to, vec3 color, float size)
 {
   vec3 d = to - from;
@@ -80,10 +75,11 @@ static void add_arrow(DebugArrow &renderer, const vec3 &from, const vec3 &to, ve
   float len = length(d);
   if (len < 0.01f)
     return;
-  mat4 s = scale(mat4(1.f), vec3(len, size, size));
+  mat4 s = scale(mat4(1.f), vec3(size, len, size));
 
-  mat4 r = directionMatrix(vec3(1, 0, 0), d);
-  add_arrow(renderer, t * r * s, color);
+  mat4 r = directionMatrix(vec3(0, 1, 0), d);
+  renderer.instancesTm.emplace_back(t * r * s);
+  renderer.instancesColor.emplace_back(vec4(color, 1.f));
 }
 
 void draw_arrow(const mat4 &transform, const vec3 &from, const vec3 &to, vec3 color, float size)
@@ -95,11 +91,6 @@ void draw_arrow(const vec3 &from, const vec3 &to, vec3 color, float size)
 {
   if (arrowRender)
     add_arrow(*arrowRender, from, to, color, size);
-}
-void draw_arrow(const glm::mat4 &tm, vec3 color)
-{
-  if (arrowRender)
-    add_arrow(*arrowRender, tm, color);
 }
 
 void render_arrows(const mat4 &cameraProjView, vec3 cameraPosition, const DirectionLight &light)

@@ -1,7 +1,7 @@
 #include "log.h"
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>
-#include "application.h"
+#include "new_time.h"
 #include <list>
 #include <stdarg.h>
 #include <mutex>

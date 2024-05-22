@@ -1,5 +1,6 @@
 #include "material.h"
 
+
 void Material::bind_uniforms_to_shader() const
 {
   const auto &uniforms = shader->uniforms;

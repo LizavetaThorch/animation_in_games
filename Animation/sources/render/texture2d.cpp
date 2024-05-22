@@ -44,7 +44,7 @@ Texture2DPtr create_texture2d(const char *path)
   int w, h, ch;
   stbi_set_flip_vertically_on_load(true);
   auto stbiData = stbi_load(path, &w, &h, &ch, 0);
-  assert(ch == 4 || ch == 3);
+  // assert(ch == 4);
   Texture2DPtr result;
   if (stbiData)
   {

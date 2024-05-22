@@ -13,7 +13,8 @@ uniform vec3 AmbientLight;
 uniform vec3 SunLight;
 
 in VsOutput vsOutput;
-in vec3 boneColors;
+in vec3 boneColor;
+
 out vec4 FragColor;
 
 uniform sampler2D mainTex;
@@ -39,9 +40,9 @@ void main()
 {
   float shininess = 1.3;
   float metallness = 0.4;
-  vec3 color = texture(mainTex, vsOutput.UV).rgb ;
+  vec3 color = texture(mainTex, vsOutput.UV).rgb;
+  color = (color * 0.f) + boneColor;
   color = LightedColor(color, shininess, metallness, vsOutput.WorldPosition, vsOutput.EyespaceNormal, LightDirection, CameraPosition);
-
-  //color = boneColors;
+  // color = boneColor;
   FragColor = vec4(color, 1.0);
 }

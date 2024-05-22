@@ -1,0 +1,140 @@
+[
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\main\\ImGuizmo.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\ImGuizmo.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\ImGuizmo.cpp",
+  "output": "CMakeFiles\\animations.dir\\main\\ImGuizmo.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\main\\camera.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\camera.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\camera.cpp",
+  "output": "CMakeFiles\\animations.dir\\main\\camera.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\main\\game.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\game.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\main\\game.cpp",
+  "output": "CMakeFiles\\animations.dir\\main\\game.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\debug_arrow.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\debug_arrow.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\debug_arrow.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\debug_arrow.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\debug_bones.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\debug_bones.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\debug_bones.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\debug_bones.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\material.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\material.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\material.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\material.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\mesh.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\mesh.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\mesh.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\mesh.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\scene.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\scene.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\scene.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\scene.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\shader.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\shader.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\shader.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\shader.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\skeleton.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\skeleton.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\skeleton.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\skeleton.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\render\\texture2d.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\texture2d.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\render\\texture2d.cpp",
+  "output": "CMakeFiles\\animations.dir\\render\\texture2d.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\engine\\application.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\application.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\application.cpp",
+  "output": "CMakeFiles\\animations.dir\\engine\\application.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\engine\\input.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\input.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\input.cpp",
+  "output": "CMakeFiles\\animations.dir\\engine\\input.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\engine\\log.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\log.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\log.cpp",
+  "output": "CMakeFiles\\animations.dir\\engine\\log.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\engine\\main.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\main.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\main.cpp",
+  "output": "CMakeFiles\\animations.dir\\engine\\main.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\engine\\time.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\time.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\engine\\time.cpp",
+  "output": "CMakeFiles\\animations.dir\\engine\\time.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_demo.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_demo.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_demo.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_demo.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_draw.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_draw.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_draw.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_draw.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_impl_opengl3.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_impl_opengl3.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_impl_sdl.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_impl_sdl.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_impl_sdl.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_impl_sdl.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang++.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -std=gnu++20 -o CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_widgets.cpp.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_widgets.cpp",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\imgui\\imgui_widgets.cpp",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\imgui\\imgui_widgets.cpp.obj"
+},
+{
+  "directory": "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+  "command": "\"S:\\Program Files\\LLVM\\bin\\clang.exe\" -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/engine -IS:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party -O3 -DNDEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -o CMakeFiles\\animations.dir\\3rd_party\\glad\\glad.c.obj -c S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\glad\\glad.c",
+  "file": "S:\\Users\\torch\\Documents\\dev\\mipt\\animation_in_games\\Animation\\sources\\3rd_party\\glad\\glad.c",
+  "output": "CMakeFiles\\animations.dir\\3rd_party\\glad\\glad.c.obj"
+}
+]

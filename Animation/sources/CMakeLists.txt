@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(EXE_NAME animations)
 
-message(PROJECT = ${EXE_NAME} )
-message(${CMAKE_BINARY_DIR})
+message(PROJECT = ${EXE_NAME})
 project(${EXE_NAME})
 
 
