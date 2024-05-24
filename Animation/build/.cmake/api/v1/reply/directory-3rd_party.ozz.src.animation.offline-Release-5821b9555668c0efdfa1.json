@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"3rd_party/ozz/src/animation/offline/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 34,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"3rd_party/ozz/src/animation/offline/ozz_animation_offline.lib"
+			],
+			"targetId" : "ozz_animation_offline::@e7d61676d1451550511b",
+			"targetIndex" : 9,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "ozz_animation_offline::@e7d61676d1451550511b",
+				"index" : 9
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rd_party/ozz/src/animation/offline",
+		"source" : "3rd_party/ozz/src/animation/offline"
+	}
+}

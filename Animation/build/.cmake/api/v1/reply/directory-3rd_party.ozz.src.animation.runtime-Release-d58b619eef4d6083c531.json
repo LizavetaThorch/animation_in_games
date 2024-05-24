@@ -1,0 +1,56 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"3rd_party/ozz/src/animation/runtime/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"3rd_party/ozz/src/animation/runtime/ozz_animation.lib"
+			],
+			"targetId" : "ozz_animation::@070a0f6550b80809319e",
+			"targetIndex" : 8,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "ozz_animation::@070a0f6550b80809319e",
+				"index" : 8
+			},
+			"destination" : "lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rd_party/ozz/src/animation/runtime",
+		"source" : "3rd_party/ozz/src/animation/runtime"
+	}
+}

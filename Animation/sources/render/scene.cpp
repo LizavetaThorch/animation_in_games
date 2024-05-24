@@ -7,7 +7,8 @@
 
 
 MeshPtr create_mesh(const aiMesh *mesh);
-SkeletonPtr load_skeleton(const aiNode *node);
+SkeletonPtr create_skeleton(const aiNode &ai_node);
+AnimationPtr create_animation(const aiAnimation &ai_animation, const SkeletonPtr &skeleton);
 
 SceneAsset load_scene(const char *path, int load_flags)
 {
@@ -16,7 +17,7 @@ SceneAsset load_scene(const char *path, int load_flags)
   importer.SetPropertyFloat(AI_CONFIG_GLOBAL_SCALE_FACTOR_KEY, 1.f);
 
   importer.ReadFile(path, aiPostProcessSteps::aiProcess_Triangulate | aiPostProcessSteps::aiProcess_LimitBoneWeights |
-    aiPostProcessSteps::aiProcess_GenNormals | aiProcess_GlobalScale | aiProcess_FlipWindingOrder | aiProcess_PopulateArmatureData);
+    aiPostProcessSteps::aiProcess_GenNormals | aiProcess_GlobalScale | aiProcess_FlipWindingOrder);
 
   const aiScene* scene = importer.GetScene();
   SceneAsset result;
@@ -33,7 +34,14 @@ SceneAsset load_scene(const char *path, int load_flags)
   }
   if (load_flags & SceneAsset::LoadScene::Skeleton)
   {
-    result.skeleton = load_skeleton(scene->mRootNode);
+    result.skeleton = create_skeleton(*scene->mRootNode);
+  }
+  if (load_flags & SceneAsset::LoadScene::Animation && result.skeleton)
+  {
+    result.animations.reserve(scene->mNumAnimations);
+    for (size_t i = 0; i < scene->mNumAnimations; i++)
+      if (AnimationPtr animation = create_animation(*scene->mAnimations[i], result.skeleton))
+        result.animations.emplace_back(std::move(animation));
   }
 
   importer.FreeScene();

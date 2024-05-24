@@ -7,8 +7,6 @@
 #include <log.h>
 #include "glad/glad.h"
 
-#pragma clang optimize off
-//#pragma optimize(off, "")
 static void create_indices(const std::vector<unsigned int> &indices)
 {
   GLuint arrayIndexBuffer;
@@ -32,7 +30,6 @@ static void init_channel(int index, size_t data_size, const void *data_ptr, int 
     glVertexAttribIPointer(index, component_count, GL_UNSIGNED_INT, 0, 0);
 }
 
-
 template<int i>
 static void InitChannel() { }
 
@@ -47,7 +44,6 @@ static void InitChannel(const std::vector<T> &channel, const Channel&... channel
   InitChannel<i + 1>(channels...);
 }
 
-
 template<typename... Channel>
 MeshPtr create_mesh(const std::vector<unsigned int> &indices, const Channel&... channels)
 {
@@ -58,7 +54,6 @@ MeshPtr create_mesh(const std::vector<unsigned int> &indices, const Channel&... 
   create_indices(indices);
   return std::make_shared<Mesh>(vertexArrayBufferObject, indices.size());
 }
-
 
 MeshPtr create_mesh(const aiMesh *mesh)
 {
@@ -122,7 +117,7 @@ MeshPtr create_mesh(const aiMesh *mesh)
         weightsIndex[vertex][offset] = i;
       }
     }
-    //the sum of weights not 1
+    // Normalize weights to sum up to 1
     for (int i = 0; i < numVert; i++)
     {
       vec4 w = weights[i];
@@ -130,6 +125,7 @@ MeshPtr create_mesh(const aiMesh *mesh)
       weights[i] *= 1.f / s;
     }
   }
+
   auto meshPtr = create_mesh(indices, vertices, normals, uv, weights, weightsIndex);
 
   if (mesh->HasBones())
@@ -149,7 +145,7 @@ MeshPtr create_mesh(const aiMesh *mesh)
       if (bone->mNode->mParent) {
         meshPtr->bones[i].parentName = bone->mNode->mParent->mName.C_Str();
       }
-      
+
       meshPtr->bonesMap[meshPtr->bones[i].name] = i;
     }
   }
@@ -159,7 +155,6 @@ MeshPtr create_mesh(const aiMesh *mesh)
 
 MeshPtr load_mesh(const char *path, int idx)
 {
-
   Assimp::Importer importer;
   importer.SetPropertyBool(AI_CONFIG_IMPORT_FBX_PRESERVE_PIVOTS, false);
   importer.SetPropertyFloat(AI_CONFIG_GLOBAL_SCALE_FACTOR_KEY, 1.f);
@@ -197,7 +192,6 @@ MeshPtr make_plane_mesh()
   std::vector<vec2> uv = {vec2(0,0), vec2(1,0), vec2(1,1), vec2(0,1)};
   return create_mesh(indices, vertices, normals, uv);
 }
-
 
 MeshPtr make_mesh(const std::vector<uint32_t> &indices, const std::vector<vec3> &vertices, const std::vector<vec3> &normals)
 {

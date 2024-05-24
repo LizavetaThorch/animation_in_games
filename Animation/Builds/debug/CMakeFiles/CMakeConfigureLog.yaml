@@ -315,3 +315,152 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "3rd_party/ozz/build-utils/cmake/compiler_settings.cmake:83 (check_cxx_compiler_flag)"
+      - "3rd_party/ozz/CMakeLists.txt:40 (include)"
+    checks:
+      - "Performing Test W_IGNORED_ATTRIBUTES"
+    directories:
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-gl0qt0"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-gl0qt0"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "W_IGNORED_ATTRIBUTES"
+      cached: true
+      stdout: |
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-gl0qt0'
+        
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_bf585
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe" -DW_IGNORED_ATTRIBUTES  -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++20   -Wignored-attributes -MD -MT CMakeFiles/cmTC_bf585.dir/src.cxx.obj -MF CMakeFiles\\cmTC_bf585.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_bf585.dir/src.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-gl0qt0/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_bf585.dir/src.cxx.obj -o cmTC_bf585.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_bf585.lib -Xlinker /pdb:cmTC_bf585.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "3rd_party/ozz/build-utils/cmake/compiler_settings.cmake:90 (check_cxx_compiler_flag)"
+      - "3rd_party/ozz/CMakeLists.txt:40 (include)"
+    checks:
+      - "Performing Test W_98_COMPAT_PEDANTIC"
+    directories:
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-bqewdi"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-bqewdi"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "W_98_COMPAT_PEDANTIC"
+      cached: true
+      stdout: |
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-bqewdi'
+        
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_e3cf4
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe" -DW_98_COMPAT_PEDANTIC  -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++20   -Wc++98-compat-pedantic -MD -MT CMakeFiles/cmTC_e3cf4.dir/src.cxx.obj -MF CMakeFiles\\cmTC_e3cf4.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_e3cf4.dir/src.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-bqewdi/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_e3cf4.dir/src.cxx.obj -o cmTC_e3cf4.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_e3cf4.lib -Xlinker /pdb:cmTC_e3cf4.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "3rd_party/ozz/build-utils/cmake/compiler_settings.cmake:97 (check_cxx_compiler_flag)"
+      - "3rd_party/ozz/CMakeLists.txt:40 (include)"
+    checks:
+      - "Performing Test W_UNUSED_RESULT"
+    directories:
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-25b877"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-25b877"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "W_UNUSED_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-25b877'
+        
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_2085c
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe" -DW_UNUSED_RESULT  -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++20   -Wunused-result -MD -MT CMakeFiles/cmTC_2085c.dir/src.cxx.obj -MF CMakeFiles\\cmTC_2085c.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_2085c.dir/src.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-25b877/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_2085c.dir/src.cxx.obj -o cmTC_2085c.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_2085c.lib -Xlinker /pdb:cmTC_2085c.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "3rd_party/ozz/build-utils/cmake/compiler_settings.cmake:98 (check_cxx_compiler_flag)"
+      - "3rd_party/ozz/CMakeLists.txt:40 (include)"
+    checks:
+      - "Performing Test W_NULL_DEREFERENCE"
+    directories:
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-s7eqvc"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-s7eqvc"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "W_NULL_DEREFERENCE"
+      cached: true
+      stdout: |
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-s7eqvc'
+        
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_a87f3
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe" -DW_NULL_DEREFERENCE  -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++20   -Wnull-dereference -MD -MT CMakeFiles/cmTC_a87f3.dir/src.cxx.obj -MF CMakeFiles\\cmTC_a87f3.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_a87f3.dir/src.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-s7eqvc/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_a87f3.dir/src.cxx.obj -o cmTC_a87f3.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_a87f3.lib -Xlinker /pdb:cmTC_a87f3.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "S:/Program Files/CMake/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "3rd_party/ozz/build-utils/cmake/compiler_settings.cmake:99 (check_cxx_compiler_flag)"
+      - "3rd_party/ozz/CMakeLists.txt:40 (include)"
+    checks:
+      - "Performing Test W_PRAGMA_PACK"
+    directories:
+      source: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-zlkdai"
+      binary: "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-zlkdai"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "S:/Program Files/LLVM/bin/clang-scan-deps.exe"
+      CMAKE_CXX_FLAGS: "-m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "W_PRAGMA_PACK"
+      cached: true
+      stdout: |
+        Change Dir: 'S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-zlkdai'
+        
+        Run Build Command(s): "S:/Program Files/ninja/ninja.exe" -v cmTC_fcfc8
+        [1/2] "S:\\Program Files\\LLVM\\bin\\clang++.exe" -DW_PRAGMA_PACK  -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++20   -Wpragma-pack -MD -MT CMakeFiles/cmTC_fcfc8.dir/src.cxx.obj -MF CMakeFiles\\cmTC_fcfc8.dir\\src.cxx.obj.d -o CMakeFiles/cmTC_fcfc8.dir/src.cxx.obj -c S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/CMakeFiles/CMakeScratch/TryCompile-zlkdai/src.cxx
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "S:\\Program Files\\LLVM\\bin\\clang++.exe" -nostartfiles -nostdlib -m64 -Wall -Wextra -Wno-pragma-pack -Wno-deprecated-declarations -Wno-deprecated-copy -g  -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console  -fuse-ld=lld-link CMakeFiles/cmTC_fcfc8.dir/src.cxx.obj -o cmTC_fcfc8.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_fcfc8.lib -Xlinker /pdb:cmTC_fcfc8.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        
+      exitCode: 0
+...

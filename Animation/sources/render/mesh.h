@@ -7,7 +7,6 @@
 #include <optional>
 #include <3dmath.h>
 
-
 struct Mesh
 {
   const uint32_t vertexArrayBufferObject;

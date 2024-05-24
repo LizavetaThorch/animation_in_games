@@ -14,8 +14,14 @@
 # EXTERNAL cache entries
 ########################
 
+//Build ozz as shared libraries
+BUILD_SHARED_LIBS:BOOL=OFF
+
 //No help, variable specified on the command line.
 BUILD_TYPE:UNINITIALIZED=debug
+
+//Path to a program.
+CLANG_FORMAT:FILEPATH=S:/Program Files/LLVM/bin/clang-format.exe
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
@@ -241,6 +247,33 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Enable to build 7-Zip packages
+CPACK_BINARY_7Z:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build Inno Setup packages
+CPACK_BINARY_INNOSETUP:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=ON
+
+//Enable to build NuGet packages
+CPACK_BINARY_NUGET:BOOL=OFF
+
+//Enable to build WiX packages
+CPACK_BINARY_WIX:BOOL=OFF
+
+//Enable to build ZIP packages
+CPACK_BINARY_ZIP:BOOL=OFF
+
+//Enable to build 7-Zip source packages
+CPACK_SOURCE_7Z:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=ON
+
 //Value Computed by CMake
 animations_BINARY_DIR:STATIC=S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug
 
@@ -249,6 +282,51 @@ animations_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 animations_SOURCE_DIR:STATIC=S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources
+
+//Value Computed by CMake
+ozz_BINARY_DIR:STATIC=S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/Builds/debug/3rd_party/ozz
+
+//Value Computed by CMake
+ozz_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ozz_SOURCE_DIR:STATIC=S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources/3rd_party/ozz
+
+//Build data on code change
+ozz_build_data:BOOL=OFF
+
+//Build Fbx pipeline (Requires Fbx SDK)
+ozz_build_fbx:BOOL=OFF
+
+//Build glTF importer (Requires c++11)
+ozz_build_gltf:BOOL=OFF
+
+//Build howtos
+ozz_build_howtos:BOOL=OFF
+
+//Select msvc DLL runtime library
+ozz_build_msvc_rt_dll:BOOL=OFF
+
+//Use per config postfix name
+ozz_build_postfix:BOOL=OFF
+
+//Build samples
+ozz_build_samples:BOOL=OFF
+
+//Force SIMD math reference implementation
+ozz_build_simd_ref:BOOL=OFF
+
+//Build unit tests
+ozz_build_tests:BOOL=OFF
+
+//Build tools
+ozz_build_tools:BOOL=OFF
+
+//Run samples without rendering (used for unit tests)
+ozz_run_tests_headless:BOOL=ON
+
+//Number of loops while running sample tests (used for unit tests)
+ozz_sample_testing_loops:STRING=20
 
 
 ########################
@@ -361,7 +439,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -417,4 +495,32 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_7Z
+CPACK_BINARY_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_INNOSETUP
+CPACK_BINARY_INNOSETUP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NUGET
+CPACK_BINARY_NUGET-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_WIX
+CPACK_BINARY_WIX-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_ZIP
+CPACK_BINARY_ZIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_7Z
+CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
+//Test W_98_COMPAT_PEDANTIC
+W_98_COMPAT_PEDANTIC:INTERNAL=1
+//Test W_IGNORED_ATTRIBUTES
+W_IGNORED_ATTRIBUTES:INTERNAL=1
+//Test W_NULL_DEREFERENCE
+W_NULL_DEREFERENCE:INTERNAL=1
+//Test W_PRAGMA_PACK
+W_PRAGMA_PACK:INTERNAL=1
+//Test W_UNUSED_RESULT
+W_UNUSED_RESULT:INTERNAL=1
 

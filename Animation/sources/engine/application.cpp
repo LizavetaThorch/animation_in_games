@@ -4,12 +4,13 @@
 #include <imgui/imgui_impl_sdl.h>
 #include <SDL2/SDL.h>
 
-#include "new_time.h"
-
 extern void game_init();
 extern void game_update();
 extern void game_render();
 extern void imgui_render();
+extern void start_time();
+extern void update_time();
+extern void close_game();
 
 typedef void *SDL_GLContext;
 
@@ -29,7 +30,7 @@ void init_application(const char *project_name, int width, int height, bool full
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 
-  SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, 1);    
+  SDL_GL_SetAttribute(SDL_GL_MULTISAMPLEBUFFERS, 1);
   SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, 4);
 
   size_t window_flags = SDL_WINDOW_OPENGL;
@@ -53,11 +54,12 @@ void init_application(const char *project_name, int width, int height, bool full
   ImGui_ImplOpenGL3_Init(glsl_version);
   glEnable(GL_DEBUG_OUTPUT);
 
-  glEnable(GL_MULTISAMPLE);  
+  glEnable(GL_MULTISAMPLE);
 }
 
 void close_application()
 {
+  close_game();
   ImGui_ImplOpenGL3_Shutdown();
   ImGui_ImplSDL2_Shutdown();
   ImGui::DestroyContext();
@@ -86,7 +88,7 @@ static bool sdl_event_handler()
 
 
       case SDL_MOUSEBUTTONDOWN:
-      case SDL_MOUSEBUTTONUP:  if (!WantCaptureMouse) input.event_process(event.button); break;
+      case SDL_MOUSEBUTTONUP: if (!WantCaptureMouse) input.event_process(event.button); break;
 
       case SDL_MOUSEMOTION: if (!WantCaptureMouse) input.event_process(event.motion); break;
 
@@ -127,6 +129,7 @@ void main_loop()
         }
       }
       imgui_render();
+
       ImGui::Render();
       ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
     }

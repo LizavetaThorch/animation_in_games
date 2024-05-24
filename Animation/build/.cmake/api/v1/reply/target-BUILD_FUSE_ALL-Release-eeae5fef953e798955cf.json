@@ -1,0 +1,137 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"fuse_target",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"3rd_party/ozz/build-utils/cmake/fuse_target.cmake",
+			"3rd_party/ozz/src/base/CMakeLists.txt",
+			"3rd_party/ozz/src/options/CMakeLists.txt",
+			"3rd_party/ozz/src/animation/runtime/CMakeLists.txt",
+			"3rd_party/ozz/src/animation/offline/CMakeLists.txt",
+			"3rd_party/ozz/src/geometry/runtime/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 1
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 13,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 1
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 42,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 8
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 36,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 11
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 12,
+				"parent" : 13
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 14
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "BUILD_FUSE_ozz_options::@e6e5705d7a1b3a052402"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "BUILD_FUSE_ozz_base::@52968b949c857f0ed20b"
+		},
+		{
+			"backtrace" : 9,
+			"id" : "BUILD_FUSE_ozz_animation::@070a0f6550b80809319e"
+		},
+		{
+			"backtrace" : 12,
+			"id" : "BUILD_FUSE_ozz_animation_offline::@e7d61676d1451550511b"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "BUILD_FUSE_ozz_geometry::@bb195b58eba216e4ead2"
+		}
+	],
+	"id" : "BUILD_FUSE_ALL::@52968b949c857f0ed20b",
+	"name" : "BUILD_FUSE_ALL",
+	"paths" : 
+	{
+		"build" : "3rd_party/ozz/src/base",
+		"source" : "3rd_party/ozz/src/base"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

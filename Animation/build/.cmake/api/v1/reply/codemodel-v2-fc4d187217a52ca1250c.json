@@ -1,0 +1,384 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "3rd_party/ozz",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz-Release-3ece3cce797a1544b812.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "3rd_party/ozz/src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src-Release-595a4bd71191efe88b31.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src"
+				},
+				{
+					"build" : "3rd_party/ozz/src/base",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.base-Release-c618412e260837b01de7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/base",
+					"targetIndexes" : 
+					[
+						1,
+						4,
+						10
+					]
+				},
+				{
+					"build" : "3rd_party/ozz/src/options",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.options-Release-5bac1d3a824f6459a536.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/options",
+					"targetIndexes" : 
+					[
+						6,
+						12
+					]
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation",
+					"childIndexes" : 
+					[
+						6,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.animation-Release-2c7bd32a18bb9e5db853.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation"
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation/runtime",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.animation.runtime-Release-d58b619eef4d6083c531.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation/runtime",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation/offline",
+					"childIndexes" : 
+					[
+						8,
+						9,
+						10
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.animation.offline-Release-5821b9555668c0efdfa1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation/offline",
+					"targetIndexes" : 
+					[
+						3,
+						9
+					]
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation/offline/tools",
+					"jsonFile" : "directory-3rd_party.ozz.src.animation.offline.tools-Release-047aa8b9333a34786392.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation/offline/tools"
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation/offline/fbx",
+					"jsonFile" : "directory-3rd_party.ozz.src.animation.offline.fbx-Release-c0a2a53cdcc8e0167bd9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation/offline/fbx"
+				},
+				{
+					"build" : "3rd_party/ozz/src/animation/offline/gltf",
+					"jsonFile" : "directory-3rd_party.ozz.src.animation.offline.gltf-Release-7a9cb4968bb632decb46.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/animation/offline/gltf"
+				},
+				{
+					"build" : "3rd_party/ozz/src/geometry",
+					"childIndexes" : 
+					[
+						12
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.geometry-Release-c22ffa5437661cc2625b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/geometry"
+				},
+				{
+					"build" : "3rd_party/ozz/src/geometry/runtime",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-3rd_party.ozz.src.geometry.runtime-Release-65e6ad9fc62819cbeaf6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 1,
+					"source" : "3rd_party/ozz/src/geometry/runtime",
+					"targetIndexes" : 
+					[
+						5,
+						11
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "animations",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "ozz",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "BUILD_CLANG_FORMAT::@0c5f62cc770640b8fea3",
+					"jsonFile" : "target-BUILD_CLANG_FORMAT-Release-32d51ce8cada848d3fee.json",
+					"name" : "BUILD_CLANG_FORMAT",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "BUILD_FUSE_ALL::@52968b949c857f0ed20b",
+					"jsonFile" : "target-BUILD_FUSE_ALL-Release-eeae5fef953e798955cf.json",
+					"name" : "BUILD_FUSE_ALL",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "BUILD_FUSE_ozz_animation::@070a0f6550b80809319e",
+					"jsonFile" : "target-BUILD_FUSE_ozz_animation-Release-d293bfe096564e7eb136.json",
+					"name" : "BUILD_FUSE_ozz_animation",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "BUILD_FUSE_ozz_animation_offline::@e7d61676d1451550511b",
+					"jsonFile" : "target-BUILD_FUSE_ozz_animation_offline-Release-30ce1066eb90d2c04d15.json",
+					"name" : "BUILD_FUSE_ozz_animation_offline",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "BUILD_FUSE_ozz_base::@52968b949c857f0ed20b",
+					"jsonFile" : "target-BUILD_FUSE_ozz_base-Release-72e17d12c0ea1e524d63.json",
+					"name" : "BUILD_FUSE_ozz_base",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "BUILD_FUSE_ozz_geometry::@bb195b58eba216e4ead2",
+					"jsonFile" : "target-BUILD_FUSE_ozz_geometry-Release-6432a28a0d35a27e9c6e.json",
+					"name" : "BUILD_FUSE_ozz_geometry",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "BUILD_FUSE_ozz_options::@e6e5705d7a1b3a052402",
+					"jsonFile" : "target-BUILD_FUSE_ozz_options-Release-c24b392f5715a0e52640.json",
+					"name" : "BUILD_FUSE_ozz_options",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "animations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-animations-Release-4de69db71a77518ef609.json",
+					"name" : "animations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ozz_animation::@070a0f6550b80809319e",
+					"jsonFile" : "target-ozz_animation-Release-efdfda35259f25f9f3de.json",
+					"name" : "ozz_animation",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ozz_animation_offline::@e7d61676d1451550511b",
+					"jsonFile" : "target-ozz_animation_offline-Release-8daf389714829a889218.json",
+					"name" : "ozz_animation_offline",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ozz_base::@52968b949c857f0ed20b",
+					"jsonFile" : "target-ozz_base-Release-35a85a8278be1ee5b103.json",
+					"name" : "ozz_base",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "ozz_geometry::@bb195b58eba216e4ead2",
+					"jsonFile" : "target-ozz_geometry-Release-34f19b2bc6c1e8ea3d86.json",
+					"name" : "ozz_geometry",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ozz_options::@e6e5705d7a1b3a052402",
+					"jsonFile" : "target-ozz_options-Release-b73410fbea98b49b662e.json",
+					"name" : "ozz_options",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build",
+		"source" : "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/sources"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

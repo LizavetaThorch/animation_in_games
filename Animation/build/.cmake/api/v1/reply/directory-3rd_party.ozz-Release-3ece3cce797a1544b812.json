@@ -1,0 +1,73 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include"
+		],
+		"files" : 
+		[
+			"3rd_party/ozz/build-utils/cmake/package_settings.cmake",
+			"3rd_party/ozz/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 132,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : ".",
+			"paths" : 
+			[
+				"3rd_party/ozz/include"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "share/doc/ozz-animation",
+			"paths" : 
+			[
+				"3rd_party/ozz/CHANGES.md",
+				"3rd_party/ozz/LICENSE.md",
+				"3rd_party/ozz/README.md"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "3rd_party/ozz",
+		"source" : "3rd_party/ozz"
+	}
+}

@@ -1,0 +1,85 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"fuse_target"
+		],
+		"files" : 
+		[
+			"3rd_party/ozz/build-utils/cmake/fuse_target.cmake",
+			"3rd_party/ozz/src/animation/runtime/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 42,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 1
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "ozz/fuse"
+	},
+	"id" : "BUILD_FUSE_ozz_animation::@070a0f6550b80809319e",
+	"name" : "BUILD_FUSE_ozz_animation",
+	"paths" : 
+	{
+		"build" : "3rd_party/ozz/src/animation/runtime",
+		"source" : "3rd_party/ozz/src/animation/runtime"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build/3rd_party/ozz/src/animation/runtime/CMakeFiles/BUILD_FUSE_ozz_animation",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build/3rd_party/ozz/src/animation/runtime/CMakeFiles/BUILD_FUSE_ozz_animation.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "S:/Users/torch/Documents/dev/mipt/animation_in_games/Animation/build/3rd_party/ozz/src_fused/ozz_animation.cc.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
