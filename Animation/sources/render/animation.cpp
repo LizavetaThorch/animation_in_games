@@ -1,4 +1,3 @@
-
 #include "ozz/animation/offline/raw_skeleton.h"
 #include "ozz/animation/offline/skeleton_builder.h"
 #include "ozz/animation/runtime/skeleton.h"
@@ -62,11 +61,11 @@ SkeletonPtr create_skeleton(const aiNode &ai_root)
   return std::shared_ptr<ozz::animation::Skeleton>(std::move(skeleton));
 }
 
-AnimationPtr create_animation(const aiAnimation &ai_animation, const SkeletonPtr &skeleton)
+AnimationPtr create_animation(const aiAnimation &ai_animation, const SkeletonPtr &skeleton, float tolerance, float distance, AnimationInfo* animation_info)
 {
 
   ozz::animation::offline::RawAnimation raw_animation;
-
+  
   // Sets animation duration (to 1.4s).
   // All the animation keyframes times must be within range [0, duration].
   double secondsPerTick = 1.f / ai_animation.mTicksPerSecond;
@@ -161,8 +160,17 @@ AnimationPtr create_animation(const aiAnimation &ai_animation, const SkeletonPtr
   // a new runtime animation instance.
   // This operation will fail and return an empty unique_ptr if the RawAnimation
   // isn't valid.
+  animation_info->original = raw_animation.size();
+  if (tolerance != 0 || distance != 0) {
+    ozz::animation::offline::AnimationOptimizer optimizer;
+    optimizer.setting.tolerance = tolerance * 1e-3f; optimizer.setting.distance = distance * 1e-3f; 
+    ozz::animation::offline::RawAnimation raw_optimized_animation;
+    optimizer(raw_animation, *skeleton, &raw_optimized_animation);
+    raw_animation = std::move(raw_optimized_animation);
+  } 
   ozz::unique_ptr<ozz::animation::Animation> animation = builder(raw_animation);
-
+  animation_info->optimized = raw_animation.size();
+  animation_info->compressed = animation->size();
   // ...use the animation as you want...
 
   debug_log("animation %s raw size = %d, runtime size = %d", animation->name(), raw_animation.size(), animation->size());

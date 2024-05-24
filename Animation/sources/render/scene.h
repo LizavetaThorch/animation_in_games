@@ -1,7 +1,6 @@
 #pragma once
 
 #include "mesh.h"
-
 namespace ozz
 {
   namespace animation
@@ -13,6 +12,12 @@ namespace ozz
 
 using SkeletonPtr = std::shared_ptr<ozz::animation::Skeleton>;
 using AnimationPtr = std::shared_ptr<ozz::animation::Animation>;
+
+struct AnimationInfo {
+  size_t original;
+  size_t optimized;
+  size_t compressed;
+};
 
 struct SceneAsset
 {
@@ -27,4 +32,4 @@ struct SceneAsset
   };
 };
 
-SceneAsset load_scene(const char *path, int load_flags);
+SceneAsset load_scene(const char *path, int load_flags, float animation_tolerance = 0.f, float animation_distance = 0.f,  AnimationInfo *animation_info = nullptr);

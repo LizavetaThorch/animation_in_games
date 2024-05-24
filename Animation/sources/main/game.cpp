@@ -1,15 +1,15 @@
-
 #include <render/direction_light.h>
 #include <render/material.h>
-#include <render/debug_bones.h>
+#include <render/mesh.h>
 #include <render/scene.h>
 #include "camera.h"
 #include <application.h>
 #include <render/debug_arrow.h>
+#include <render/debug_bones.h>
+#include <new_time.h>
 #include <imgui/imgui.h>
-#include "new_time.h"
 #include "ImGuizmo.h"
-#include <render/scene.h>
+#include "Filter.h"
 
 #include "ozz/animation/runtime/animation.h"
 #include "ozz/animation/runtime/local_to_model_job.h"
@@ -17,6 +17,7 @@
 #include "ozz/animation/runtime/skeleton.h"
 #include "ozz/base/maths/simd_math.h"
 #include "ozz/base/maths/soa_transform.h"
+#include "ozz/animation/offline/animation_optimizer.h"
 
 struct UserCamera
 {
@@ -31,10 +32,7 @@ struct Character
   MeshPtr mesh;
   MaterialPtr material;
 
-  // Runtime skeleton.
   SkeletonPtr skeleton_;
-
-  // Sampling context.
   std::shared_ptr<ozz::animation::SamplingJob::Context> context_;
 
   // Buffer of local transforms as sampled from animation_.
@@ -54,15 +52,35 @@ struct Scene
   UserCamera userCamera;
 
   std::vector<Character> characters;
+
 };
 
 static std::unique_ptr<Scene> scene;
 static std::vector<std::string> animationList;
 
+
+static struct {
+  bool show_bones = true;
+  bool show_arrows = true;
+  bool show_mesh = true;
+} visualisation_params;
+
+static struct {
+  float tolerance;
+  float distance;
+  float speed = 1;
+  bool pause = false;
+  bool loop = true;
+  bool optimized = false;
+} animation_params;
+
+static AnimationInfo animation_info;
+
 #include <filesystem>
 static std::vector<std::string> scan_animations(const char *path)
 {
   std::vector<std::string> animations;
+  animations.push_back("None");
   for (auto &p : std::filesystem::recursive_directory_iterator(path))
   {
     auto filePath = p.path();
@@ -95,30 +113,22 @@ void game_init()
 
   scene->userCamera.transform = calculate_transform(scene->userCamera.arcballCamera);
 
-  input.onMouseButtonEvent += [](const SDL_MouseButtonEvent &e)
-  { arccam_mouse_click_handler(e, scene->userCamera.arcballCamera); };
-  input.onMouseMotionEvent += [](const SDL_MouseMotionEvent &e)
-  { arccam_mouse_move_handler(e, scene->userCamera.arcballCamera); };
-  input.onMouseWheelEvent += [](const SDL_MouseWheelEvent &e)
-  { arccam_mouse_wheel_handler(e, scene->userCamera.arcballCamera); };
+  input.onMouseButtonEvent += [](const SDL_MouseButtonEvent &e) { arccam_mouse_click_handler(e, scene->userCamera.arcballCamera); };
+  input.onMouseMotionEvent += [](const SDL_MouseMotionEvent &e) { arccam_mouse_move_handler(e, scene->userCamera.arcballCamera); };
+  input.onMouseWheelEvent += [](const SDL_MouseWheelEvent &e) { arccam_mouse_wheel_handler(e, scene->userCamera.arcballCamera); };
+
 
   auto material = make_material("character", "sources/shaders/character_vs.glsl", "sources/shaders/character_ps.glsl");
   std::fflush(stdout);
   material->set_property("mainTex", create_texture2d("resources/MotusMan_v55/MCG_diff.jpg"));
-
-  SceneAsset sceneAsset = load_scene("resources/MotusMan_v55/MotusMan_v55.fbx",
-                                     SceneAsset::LoadScene::Meshes | SceneAsset::LoadScene::Skeleton);
-
+  
+  SceneAsset sceneAsset = load_scene("resources/MotusMan_v55/MotusMan_v55.fbx", SceneAsset::LoadScene::Meshes | SceneAsset::LoadScene::Skeleton);
   Character &character = scene->characters.emplace_back(Character{
-      glm::identity<glm::mat4>(),
-      sceneAsset.meshes[0],
-      std::move(material),
-      sceneAsset.skeleton});
+    glm::identity<glm::mat4>(),
+    sceneAsset.meshes[0],
+    std::move(material),
+    sceneAsset.skeleton});
 
-  // Skeleton and animation needs to match.
-  // assert (character.skeleton_->num_joints() != character.animation_.num_tracks());
-
-  // Allocates runtime buffers.
   const int num_soa_joints = character.skeleton_->num_soa_joints();
   character.locals_.resize(num_soa_joints);
   const int num_joints = character.skeleton_->num_joints();
@@ -128,106 +138,8 @@ void game_init()
   character.context_ = std::make_shared<ozz::animation::SamplingJob::Context>(num_joints);
 
   create_arrow_render();
-
+  create_bone_render();
   std::fflush(stdout);
-}
-
-void game_update()
-{
-  arcball_camera_update(
-      scene->userCamera.arcballCamera,
-      scene->userCamera.transform,
-      get_delta_time());
-
-  for (Character &character : scene->characters)
-  {
-    if (character.currentAnimation)
-    {
-      character.animTime += get_delta_time();
-      if (character.animTime >= character.currentAnimation->duration())
-        character.animTime = 0;
-
-      // Samples optimized animation at t = animation_time_.
-      ozz::animation::SamplingJob sampling_job;
-      sampling_job.animation = character.currentAnimation.get();
-      sampling_job.context = character.context_.get();
-      sampling_job.ratio = character.animTime / character.currentAnimation->duration();
-      sampling_job.output = ozz::make_span(character.locals_);
-      if (!sampling_job.Run())
-      {
-        continue;
-      }
-    }
-    else
-    {
-      auto restPose = character.skeleton_->joint_rest_poses();
-      std::copy(restPose.begin(), restPose.end(), character.locals_.begin());
-    }
-    ozz::animation::LocalToModelJob ltm_job;
-    ltm_job.skeleton = character.skeleton_.get();
-    ltm_job.input = ozz::make_span(character.locals_);
-    ltm_job.output = ozz::make_span(character.models_);
-    if (!ltm_job.Run())
-    {
-      continue;
-    }
-  }
-}
-
-static glm::mat4 to_glm(const ozz::math::Float4x4 &tm)
-{
-  glm::mat4 result;
-  memcpy(glm::value_ptr(result), &tm.cols[0], sizeof(glm::mat4));
-  return result;
-}
-
-void render_character(const Character &character, const mat4 &cameraProjView, vec3 cameraPosition, const DirectionLight &light)
-{
-  const Material &material = *character.material;
-  const Shader &shader = material.get_shader();
-
-  shader.use();
-  material.bind_uniforms_to_shader();
-  shader.set_mat4x4("Transform", character.transform);
-  shader.set_mat4x4("ViewProjection", cameraProjView);
-  shader.set_vec3("CameraPosition", cameraPosition);
-  shader.set_vec3("LightDirection", glm::normalize(light.lightDirection));
-  shader.set_vec3("AmbientLight", light.ambient);
-  shader.set_vec3("SunLight", light.lightColor);
-
-  size_t boneNumber = character.mesh->bindPose.size();
-  std::vector<mat4> bones(boneNumber);
-
-  const auto &skeleton = *character.skeleton_;
-  size_t nodeCount = skeleton.num_joints();
-  for (size_t i = 0; i < nodeCount; i++)
-  {
-    auto it = character.mesh->nodeToBoneMap.find(skeleton.joint_names()[i]);
-    if (it != character.mesh->nodeToBoneMap.end())
-    {
-      int boneIdx = it->second;
-      bones[boneIdx] = to_glm(character.models_[i]) * character.mesh->invBindPose[boneIdx];
-    }
-  }
-  shader.set_mat4x4("Bones", bones);
-
-  render(character.mesh);
-
-  for (size_t i = 0; i < nodeCount; i++)
-  {
-    for (size_t j = i; j < nodeCount; j++)
-    {
-      if (skeleton.joint_parents()[j] == int(i))
-      {
-        alignas(16) glm::vec3 offset;
-        ozz::math::Store3Ptr(character.models_[i].cols[3] - character.models_[j].cols[3], glm::value_ptr(offset));
-
-        glm::mat4 globTm = to_glm(character.models_[j]);
-        offset = inverse(globTm) * glm::vec4(offset, .0f);
-        draw_arrow(character.transform * to_glm(character.models_[j]), vec3(0), offset, vec3(0, 0.5f, 0), 0.01f);
-      }
-    }
-  }
 }
 
 void render_imguizmo(ImGuizmo::OPERATION &mCurrentGizmoOperation, ImGuizmo::MODE &mCurrentGizmoMode)
@@ -266,38 +178,96 @@ void imgui_render()
   ImGuizmo::BeginFrame();
   for (Character &character : scene->characters)
   {
-    const auto &skeleton = *character.skeleton_;
-    size_t nodeCount = skeleton.num_joints();
+    // character.skeleton.updateLocalTransforms();
+    // const RuntimeSkeleton &skeleton = character.skeleton;
+    // size_t nodeCount = skeleton.ref->nodeCount;
+    // static size_t idx = 0;
+    // if (ImGui::Begin("Skeleton view"))
+    // {
+    //   for (size_t i = 0; i < nodeCount; i++)
+    //   {
+    //     ImGui::Text("%d) %s", int(i), skeleton.ref->names[i].c_str());
+    //     ImGui::SameLine();
+    //     ImGui::PushID(i);
+    //     if (ImGui::Button("edit"))
+    //     {
+    //       idx = i;
+    //     }
+    //     ImGui::PopID();
+    //   }
+    // }
+    // const auto &skeleton = *character.skeleton_;
+    // size_t nodeCount = skeleton.num_joints();
 
-    if (ImGui::Begin("Skeleton view"))
+    // if (ImGui::Begin("Skeleton view"))
+    // {
+    //   for (size_t i = 0; i < nodeCount; i++)
+    //   {
+    //     ImGui::Text("%d) %s", int(i), skeleton.joint_names()[i]);
+    //   }
+    // }
+    // ImGui::End();
+
+    if (ImGui::Begin("Visualisition"))
     {
-      for (size_t i = 0; i < nodeCount; i++)
-      {
-        ImGui::Text("%d) %s", int(i), skeleton.joint_names()[i]);
-      }
+      ImGui::Checkbox("Show mesh", &visualisation_params.show_mesh);
+      ImGui::Checkbox("Show bones", &visualisation_params.show_bones);
+      ImGui::Checkbox("Show arrows", &visualisation_params.show_arrows);
     }
     ImGui::End();
 
-    if (ImGui::Begin("Animation list"))
-    {
-      std::vector<const char *> animations(animationList.size() + 1);
-      animations[0] = "None";
-      for (size_t i = 0; i < animationList.size(); i++)
-        animations[i + 1] = animationList[i].c_str();
-      static int item = 0;
-      if (ImGui::Combo(animations[item], &item, animations.data(), animations.size()))
-      {
+    static int item = 0;
+    if (ImGui::Begin("Animation list")) {
+      if (ImGui::ComboWithFilter("##anim", &item, animationList)) {
         AnimationPtr animation;
         if (item > 0)
         {
-          SceneAsset sceneAsset = load_scene(animations[item],
-                                             SceneAsset::LoadScene::Skeleton | SceneAsset::LoadScene::Animation);
-          if (!sceneAsset.animations.empty())
+          SceneAsset sceneAsset;
+          sceneAsset = load_scene(animationList[item].c_str(),
+                                            SceneAsset::LoadScene::Skeleton | SceneAsset::LoadScene::Animation,
+                                            0.f, 0.f, &animation_info);
+          if (!sceneAsset.animations.empty()) {
             animation = sceneAsset.animations[0];
+          }
+          animation_params.optimized = false;
         }
         character.currentAnimation = animation;
         character.animTime = 0;
       }
+      ImGui::Checkbox("Pause", &animation_params.pause);
+      ImGui::Checkbox("Loop", &animation_params.loop);
+      float finishTime =  character.currentAnimation ?  character.currentAnimation->duration() : 0;
+      ImGui::SliderFloat("Animation time", &character.animTime, 0, finishTime);
+      ImGui::SliderFloat("Speed", &animation_params.speed, 0, 3);
+      if (ImGui::Button("Reset speed")) {
+        animation_params.speed = 1.0f;
+      }
+      ImGui::SliderFloat("Tolerance (mm)", &animation_params.tolerance, 0, 100);
+      ImGui::SliderFloat("Distance (mm)", &animation_params.distance, 0, 1000);
+      if (ImGui::Button("Apply optimize")) {
+        AnimationPtr animation;
+        if (item > 0)
+        {
+          SceneAsset sceneAsset;
+          sceneAsset = load_scene(animationList[item].c_str(),
+                                            SceneAsset::LoadScene::Skeleton | SceneAsset::LoadScene::Animation,
+                                            animation_params.tolerance, animation_params.distance, &animation_info);
+          if (!sceneAsset.animations.empty()) {
+            animation = sceneAsset.animations[0];
+          }
+          animation_params.optimized = (animation_params.tolerance != 0.f || animation_params.distance != 0.f);
+        }
+        character.currentAnimation = animation;
+        character.animTime = 0;
+      }
+      if (animation_params.optimized) {
+        ImGui::Text("Optimized");
+      } else {
+        ImGui::Text("Non optimized");
+      }
+      ImGui::Text("Original: %llu", animation_info.original);
+      ImGui::Text("Optimized: %llu", animation_info.optimized);
+      ImGui::Text("Compressed: %llu", animation_info.compressed);
     }
     ImGui::End();
 
@@ -310,15 +280,130 @@ void imgui_render()
     mat4 cameraView = inverse(transform);
     ImGuiIO &io = ImGui::GetIO();
     ImGuizmo::SetRect(0, 0, io.DisplaySize.x, io.DisplaySize.y);
-
+    
     glm::mat4 globNodeTm = character.transform;
 
     ImGuizmo::Manipulate(glm::value_ptr(cameraView), glm::value_ptr(projection), mCurrentGizmoOperation, mCurrentGizmoMode,
                          glm::value_ptr(globNodeTm));
 
     character.transform = globNodeTm;
-
     break;
+    }
+}
+
+void game_update()
+{
+  arcball_camera_update(
+    scene->userCamera.arcballCamera,
+    scene->userCamera.transform,
+    get_delta_time());
+  for (Character &character : scene->characters)
+  {
+    if (character.currentAnimation)
+    {
+      character.animTime += animation_params.pause ? 0 : get_delta_time() * animation_params.speed;
+      if (character.animTime >= character.currentAnimation->duration()) {
+        if (animation_params.loop) {
+          character.animTime = 0;
+        } else {
+          character.animTime = character.currentAnimation->duration();
+        }
+      }
+
+      // Samples optimized animation at t = animation_time_.
+      ozz::animation::SamplingJob sampling_job;
+      sampling_job.animation = character.currentAnimation.get();
+      sampling_job.context = character.context_.get();
+      sampling_job.ratio = character.animTime / character.currentAnimation->duration();
+      sampling_job.output = ozz::make_span(character.locals_);
+      if (!sampling_job.Run())
+      {
+        continue;
+      }
+    }
+    else
+    {
+      auto restPose = character.skeleton_->joint_rest_poses();
+      std::copy(restPose.begin(), restPose.end(), character.locals_.begin());
+    }
+    ozz::animation::LocalToModelJob ltm_job;
+    ltm_job.skeleton = character.skeleton_.get();
+    ltm_job.input = ozz::make_span(character.locals_);
+    ltm_job.output = ozz::make_span(character.models_);
+    if (!ltm_job.Run())
+    {
+      continue;
+    }
+  }
+}
+
+static glm::mat4 to_glm(const ozz::math::Float4x4 &tm)
+{
+  glm::mat4 result;
+  memcpy(glm::value_ptr(result), &tm.cols[0], sizeof(glm::mat4));
+  return result;
+}
+
+void render_character(const Character &character, const mat4 &cameraProjView, vec3 cameraPosition, const DirectionLight &light)
+{
+  if (visualisation_params.show_mesh) {
+    const Material &material = *character.material;
+    const Shader &shader = material.get_shader();
+
+    shader.use();
+    material.bind_uniforms_to_shader();
+    shader.set_mat4x4("Transform", character.transform);
+    shader.set_mat4x4("ViewProjection", cameraProjView);
+    shader.set_vec3("CameraPosition", cameraPosition);
+    shader.set_vec3("LightDirection", glm::normalize(light.lightDirection));
+    shader.set_vec3("AmbientLight", light.ambient);
+    shader.set_vec3("SunLight", light.lightColor);
+
+    size_t boneNumber = character.mesh->bones.size();
+    std::vector<mat4> bones(boneNumber);
+
+    const auto &skeleton = *character.skeleton_;
+    size_t nodeCount = skeleton.num_joints();
+    for (size_t i = 0; i < nodeCount; i++)
+    {
+      auto it = character.mesh->bonesMap.find(skeleton.joint_names()[i]);
+      if (it != character.mesh->bonesMap.end())
+      {
+        int boneIdx = it->second;
+        bones[boneIdx] = to_glm(character.models_[i]) * character.mesh->bones[boneIdx].invBindPose;
+      }
+    }
+    shader.set_mat4x4("Bones", bones);
+
+    render(character.mesh);
+  }
+  
+  const auto &skeleton = *character.skeleton_;
+  size_t nodeCount = skeleton.num_joints();
+  for (size_t i = 0; i < nodeCount; i++)
+  { 
+    float distanceToParent = 0.0f;
+
+    int parentId = skeleton.joint_parents()[i];
+    glm::mat4 boneTm   =  character.transform * to_glm(character.models_[i]);  
+    if (parentId != -1 && parentId != 0 && parentId != 1) {
+      glm::mat4 parentTm =  character.transform * to_glm(character.models_[parentId]);      
+      vec3 parentPos = parentTm[3];
+      vec3 bonePos = boneTm[3];
+      distanceToParent = glm::length(bonePos - parentPos);
+      if (visualisation_params.show_bones) {
+        constexpr vec3 darkGreenColor = vec3(46.0 / 255, 142.0 / 255, 16.0 / 255);
+        draw_bone(parentPos, bonePos, darkGreenColor, 0.1f);
+      }
+    }
+
+    if (visualisation_params.show_arrows) {
+      const float arrowLength = (distanceToParent + 0.1) / 5.0;
+      constexpr float arrowSize = 0.004f;
+      draw_arrow(boneTm, vec3(0), vec3(arrowLength, 0, 0), vec3(1, 0, 0), arrowSize);
+      draw_arrow(boneTm, vec3(0), vec3(0, arrowLength, 0), vec3(0, 1, 0), arrowSize);
+      draw_arrow(boneTm, vec3(0), vec3(0, 0, arrowLength), vec3(0, 0, 1), arrowSize);
+    }
   }
 }
 
@@ -330,6 +415,7 @@ void game_render()
   glClearColor(grayColor, grayColor, grayColor, 1.f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+
   const glm::mat4 &projection = scene->userCamera.projection;
   const glm::mat4 &transform = scene->userCamera.transform;
   glm::mat4 projView = projection * inverse(transform);
@@ -337,6 +423,8 @@ void game_render()
   for (const Character &character : scene->characters)
     render_character(character, projView, glm::vec3(transform[3]), scene->light);
 
+
+  render_bones(projView, glm::vec3(transform[3]), scene->light);
   render_arrows(projView, glm::vec3(transform[3]), scene->light);
 }
 
